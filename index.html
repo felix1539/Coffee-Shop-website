@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>The Hideout</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" title="style" />
+    <style type="text/css">
+        body {
+            background-image: url('images/cupsteam.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: black;
+        }
+        
+        #menu {
+            background-image: none;
+        }
+        
+        .button1 {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 40px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        
+        .button2 {
+            background-color: #008CBA;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+
+
+</head>
+
+
+<body>
+
+
+
+    <div id="menubar">
+        <ul id="menu">
+            <li>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+            </li>
+
+            <li class="selected"><a href="index.html">Home</a></li>
+
+            <li><a href="about.html">About us</a></li>
+
+            <li><a href="location.html">Locations</a></li>
+
+            <li><a href="menu.html">Menu</a></li>
+
+
+        </ul>
+    </div>
+    <div id="name">
+        <img src="images/logo.jpg">
+    </div>
+
+    <button class="button button1" onclick="window.location.href='login.php';">Login</button>
+    <button class="button button2" onclick="window.location.href='signup.php';">Signup</button>
+</body>
+
+</html>

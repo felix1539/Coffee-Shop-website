@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>order</title>
+    <link rel="stylesheet" type="text/css" href="style.css" title="style" />
+
+
+    <script type="text/javascript">
+        function compCost() {
+            var qf, qc, qca, ql, qa, qcm, qm;
+            var pf = 3.49,
+                pc = 2.59,
+                pca = 3.50,
+                pl = 3.75,
+                pa = 3.00,
+                pcm = 4.55,
+                pm = 4.00;
+            var total;
+
+
+            qf = document.getElementById("french").value;
+            qf = parseFloat(qf);
+
+            if (isNaN(qf))
+                qf = 0;
+
+
+            qc = parseFloat(document.getElementById("columbian").value);
+            if (isNaN(qc)) qc = 0;
+
+            qca = parseFloat(document.getElementById("cappuccino").value);
+            if (isNaN(qca)) qca = 0;
+
+            ql = parseFloat(document.getElementById("latte").value);
+            if (isNaN(ql)) ql = 0;
+
+            qa = parseFloat(document.getElementById("americano").value);
+            if (isNaN(qa)) qa = 0;
+
+            qcm = parseFloat(document.getElementById("caramelMacchiato").value);
+            if (isNaN(qcm)) qcm = 0;
+
+            qm = parseFloat(document.getElementById("mocha").value);
+            if (isNaN(qm)) qm = 0;
+
+            total = pf * qf + pc * qc + pca * qca + pl * ql + pa * qa + pcm * qcm + pm * qm;
+
+
+            document.getElementById("cost").value = "$" + total.toFixed(2);
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="menubar">
+        <ul id="menu">
+            <li>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+            </li>
+
+            <li><a href="../home.php">Home</a></li>
+
+            <li><a href="../login/about.html">About us</a></li>
+
+            <li><a href="../login/location.html">Locations</a></li>
+
+            <li><a href="../login/menu.html">Menu</a></li>
+
+            <li class="selected"><a href="../login/order.html">Order</a></li>
+
+            <li><a href="../login/contact.html">Contact Us</a></li>
+
+        </ul>
+    </div>
+
+
+    <div id="site_content">
+
+        <div id="contant">
+
+            <form action="order.php" method="post">
+                <h3> Coffee Order </h3>
+
+
+                <table border="border">
+
+                    <thead>
+                        <tr>
+                            <th> Drink </th>
+                            <th> Price </th>
+                            <th> Quantity </th>
+                        </tr>
+                    </thead>
+
+                    <tr>
+                        <th> French Vanilla </th>
+                        <td> $3.49 </td>
+                        <td> <input type="text" id="french" size="2" name="french"> </td>
+                    </tr>
+                    <tr>
+                        <th> Colombian </th>
+                        <td> $2.59 </td>
+                        <td> <input type="text" id="columbian" size="2" name="columbian"></td>
+                    </tr>
+                    <tr>
+                        <th> Cappuccino </th>
+                        <td> $3.50 </td>
+                        <td> <input type="text" id="cappuccino" size="2" name="cappuccino"></td>
+                    </tr>
+                    <tr>
+                        <th> Latte </th>
+                        <td> $3.75 </td>
+                        <td> <input type="text" id="latte" size="2" name="latte"></td>
+                    </tr>
+                    <tr>
+                        <th> Americano </th>
+                        <td> $3.00 </td>
+                        <td> <input type="text" id="americano" size="2" name="americano"></td>
+                    </tr>
+                    <tr>
+                        <th> Caramel Macchiato </th>
+                        <td> $4.55 </td>
+                        <td> <input type="text" id="caramelMacchiato" size="2" name="Caramel_Macchiato"></td>
+                    </tr>
+                    <tr>
+                        <th> Mocha</th>
+                        <td> $4.00 </td>
+                        <td> <input type="text" id="mocha" size="2" name="mocha"></td>
+                    </tr>
+                </table>
+
+                <br><br>
+
+                <p>
+                    <input type="button" value="Total Cost" onclick="compCost()">
+                    <input type="text" size="10" id="cost" onfocus="this.blur()">
+                </p>
+
+
+                <br>
+                <p>
+                    <input type="submit" value="Submit Order">
+                    <input type="reset" value="Clear Order Form">
+                </p>
+            </form>
+        </div>
+        <br><br>
+        <div id="time">
+            <script type="text/javascript">
+                var now = new Date();
+                var dayOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                var month = ["January", "February", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "October", "Nov", "Dec"];
+
+                document.write("<p>Today is " + dayOfWeek[now.getDay()] + ", " + month[now.getMonth()] +
+                    " " + now.getDate() + ", " + now.getFullYear() + ".</p>");
+            </script>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>contact</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" title="style" />
+
+</head>
+
+
+
+<body>
+
+
+    <div id="menubar">
+        <ul id="menu">
+            <li>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+            </li>
+
+            <li><a href="../home.php">Home</a></li>
+
+            <li><a href="../login/about.html">About us</a></li>
+
+            <li><a href="../login/location.html">Locations</a></li>
+
+            <li><a href="../login/menu.html">Menu</a></li>
+
+            <li><a href="../login/order.html">Order</a></li>
+
+            <li class="selected"><a href="../login/contact.html">Contact Us</a></li>
+
+        </ul>
+    </div>
+
+    <div id="site_content">
+
+        <div id="contant">
+            <form name="contactUsForm" action="contact.php" method="post">
+
+                <p>
+                    <p>Name</p><input type="text" name="name" size="20" max="30" /></p>
+
+                <p>
+                    <p>Email</p><input class="requiredAttr" type="email" name="email" size="25" /></p>
+
+                <p>
+                    <p>Message</p><textarea rows="5" cols="50" name="message"></textarea></p>
+
+                <input type="submit" value="Submit">
+                <input type="reset" value="Cancel">
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

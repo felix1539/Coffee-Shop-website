@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>about</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" title="style" />
+
+</head>
+
+<body>
+    <div id="menubar">
+        <ul id="menu">
+            <li>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+            </li>
+
+            <li><a href="index.html">Home</a></li>
+
+            <li class="selected"><a href="about.html">About us</a></li>
+
+            <li><a href="location.html">Locations</a></li>
+
+            <li><a href="menu.html">Menu</a></li>
+
+
+
+        </ul>
+    </div>
+
+
+
+    <div id="site_content">
+
+        <div id="contant">
+
+            <div id="abo">
+                <p>
+                    <img id="gif" src="images/logo.jpg"> The Hideout is not your ordinary coffee shop. It’s an escape from all the negativity in this world. Meet with friends or lounge on your own to escape responsibilities. unlike other spots we strive
+                    to make the shop a comfortable experience for all. unlike other spots we DO NOT play loud music so, you can actually read a book in peace. We also have great handcrafted coffee.
+
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+    <script type=text/javascript>
+        if (document.images) {
+            var fullImg = new Array(4);
+            for (var i = 0; i < fullImg.length; i++)
+                fullImg[i] = new Image(277, 373);
+            fullImg[0].src = "images/logo.jpg";
+            fullImg[1].src = "images/america2.jpg";
+            fullImg[2].src = "images/cupred.jpg";
+            fullImg[3].src = "images/cupred1.jpg";
+
+        }
+
+        var inter = null;
+        var w;
+        var n = 1;
+
+        window.addEventListener("load", page_load, false);
+
+        function page_load() {
+            setInterval("display()", 5000);
+        }
+
+        function display() {
+            //choose the corresponding full-size picture to display
+            document.getElementById("gif").src = fullImg[n].src;
+            n++;
+            if (n >= 4) n = 0;
+            //how to display
+            w = 0;
+            inter = setInterval("expand()", 20);
+        }
+
+        function expand() {
+            w += 3;
+            document.getElementById("gif");
+            if (w >= 277)
+                clearInterval(inter);
+        }
+    </script>
+
+</body>
+
+</html>
